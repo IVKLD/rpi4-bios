@@ -1,0 +1,54 @@
+## @file
+#  Component description file for DiagModule EFI Application.
+#
+#  Copyright (c) 2026, Master's Thesis Project. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = DiagModule
+  FILE_GUID                      = 58d2a58b-bc19-482a-aef2-f542a24fa687
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  DiagModule.h
+  DiagModule.c
+  CpuDiag.c
+  RamDiag.c
+  PlatformDiag.c
+  UiAndFault.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  DiagPkg/DiagPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  BaseLib
+  BaseMemoryLib
+  MemoryAllocationLib
+  DebugLib
+  PrintLib
+
+[Protocols]
+  gEfiLoadedImageProtocolGuid                   ## CONSUMES
+  gEfiMpServiceProtocolGuid                     ## CONSUMES
+  gEfiPciRootBridgeIoProtocolGuid               ## CONSUMES
+  gEfiBlockIoProtocolGuid                       ## CONSUMES
+  gEfiGraphicsOutputProtocolGuid                ## CONSUMES
+  gEfiSimpleFileSystemProtocolGuid              ## CONSUMES
+  gEfiShellParametersProtocolGuid               ## SOMETIMES_CONSUMES
+
+[Guids]
+  gEfiAcpiTableGuid                             ## CONSUMES
+  gEfiAcpi20TableGuid                           ## CONSUMES
+  gEfiSmbiosTableGuid                           ## CONSUMES
+  gEfiSmbios3TableGuid                          ## CONSUMES
+
+[BuildOptions]
+  GCC:*_*_AARCH64_CC_FLAGS = -Wno-unused-variable

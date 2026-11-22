@@ -1,0 +1,19 @@
+## @file
+#  Package declaration for ARM64 Pre-boot Diagnostics Module.
+#
+#  Copyright (c) 2026, Master's Thesis Project. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  DEC_SPECIFICATION = 0x00010005
+  PACKAGE_NAME      = DiagPkg
+  PACKAGE_GUID      = 8e91d57e-3cf8-4d92-965d-2b4a52c3c901
+  PACKAGE_VERSION   = 0.1
+
+[Includes]
+  Include
+
+[Guids]
+
+[Protocols]

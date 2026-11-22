@@ -1,0 +1,66 @@
+# ==========================================
+# Build outputs and intermediate binaries
+# ==========================================
+Build/
+build/
+*.debug
+*.obj
+*.o
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.map
+*.deps
+deps.txt
+deps_target
+
+# ==========================================
+# Firmware and Disk Images (Large binaries)
+# ==========================================
+bin/
+*.fd
+*.img
+*.iso
+*.raw
+
+# ==========================================
+# Compiled UEFI Binaries
+# ==========================================
+*.efi
+*.EFI
+
+# ==========================================
+# Archives
+# ==========================================
+*.zip
+*.tar.*
+*.gz
+*.bz2
+*.xz
+*.7z
+
+# ==========================================
+# Auto-generated EDK2 Configuration / Cache
+# ==========================================
+Conf/.cache/
+Conf/.AutoGenIdFile.txt
+Conf/BuildEnv.sh
+
+# ==========================================
+# Nix build artifacts
+# ==========================================
+result
+result-*
+
+# ==========================================
+# OS and Editor files
+# ==========================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

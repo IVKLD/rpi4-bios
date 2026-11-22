@@ -1,0 +1,11 @@
+# Raspberry Pi 4 Model B (BCM2711) UEFI Boot Configuration
+arm_64bit=1
+enable_uart=1
+uart_2ndstage=1
+enable_gic=1
+armstub=RPI_EFI.fd
+disable_commandline_tags=1
+device_tree_address=0x3000000
+device_tree_end=0x3100000
+dtoverlay=miniuart-bt
+total_mem=4096
